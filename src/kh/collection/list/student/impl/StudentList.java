@@ -1,5 +1,8 @@
 package kh.collection.list.student.impl;
 
+import java.util.Arrays;
+
+import kh.collection.list.student.model.compare.DescJava;
 import kh.collection.list.student.model.vo.Student;
 
 public class StudentList {
@@ -51,13 +54,38 @@ public class StudentList {
 	}
 
 	public Student remove(int index) {
-		elementData[index] = null;
+		Student removed = elementData[index];
 		// 밀어내기
-		for (int i = index+1; i < size; i++) {
-			elementData[index] = elementData[i];
+		for (int i = index; i < size-1; i++) {
+			elementData[i] = elementData[i+1];
 		}
 		
-		return elementData[index];
+		size--;
+		return removed;
+	}
+
+	public int indexOf(Student search) {
+		for (int i = 0; i < size; i++) {
+			if(elementData[i].equals(search)){
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public void sort(DescJava descJava) {
+		// null인 요소는 비교의 대상이 될 수 없다.
+		// compare메서드중 NullPointerException 유발함
+		// 현재 크기의 size를 배열크기로 하는 새로운 Student 객체 생성
+		Student[] arr = new Student[size];
+		// 기존 데이터를 새로운 A에 복사함
+		System.arraycopy(elementData, 0, arr, 0, size);
+		
+		// 배열을 정렬함
+		Arrays.sort(arr, descJava);
+		for (int i = 0; i < size; i++) {
+			elementData[i] = arr[i];
+		}
 	}
 	
 }
