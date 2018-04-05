@@ -1,4 +1,4 @@
-package kh.collection.set.student.model.vo;
+package kh.collection.map.student.model.vo;
 
 public class Student {
 	private String stdtId;
@@ -25,7 +25,7 @@ public class Student {
 	
 	@Override
 	public String toString() {
-		return "[("+stdtId + ") " + stdtName +"]";
+		return "[(stdtId: "+stdtId + ") " + "stdtName: " + stdtName +"]";
 	}
 	@Override
 	public boolean equals(Object obj) {

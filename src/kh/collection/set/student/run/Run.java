@@ -1,9 +1,11 @@
-package com.collection.set.student.run;
+package kh.collection.set.student.run;
 
 import java.util.HashSet;
 import java.util.Set;
+import kh.collection.set.student.model.vo.Student;
 
-import com.collection.set.student.model.vo.Student;
+
+
 
 public class Run {
 	private HashSet<Student> stdtSet = new HashSet<>();
