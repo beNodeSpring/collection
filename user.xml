@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>user Info</comment>
+<entry key="userPhone">01012345678</entry>
+<entry key="userId">kjm</entry>
+<entry key="userName">김종민</entry>
+</properties>
